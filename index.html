@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Claim Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Claim Your Salary</h1>
+    <form id="loginForm">
+      <label for="employee-id">Employee ID:</label>
+      <input type="text" id="employee-id" name="employee-id" required>
+
+      <label for="password">ID Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Claim Salary</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const employeeId = document.getElementById('employee-id').value;
+      const password = document.getElementById('password').value;
+
+      // Replace these with actual IDs and passwords
+      if (employeeId === 'aribo' && password === 'raso') {
+        window.location.href = 'ariyan.html';
+      } else if (employeeId === 'rasa123' && password === 'jaya') {
+        window.location.href = 'rasa.html';
+      } else {
+        alert('Invalid Employee ID or Password');
+      }
+    });
+  </script>
+</body>
+
+</html>
